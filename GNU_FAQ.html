@@ -1,0 +1,296 @@
+<html>
+	<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	</head>
+	
+	<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">GCC</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExample04">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Documentation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Download</a>
+					</li
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Sources</a>
+					</li
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Development</a>
+					</li
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Bugs</a>
+					</li
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Download</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+					</li>
+					</ul>
+				<form role="search">
+					<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	
+	
+	<img src: "ComputerStockImage.jpg" alt= "Person typing on a comupter">
+	<h1> Frequently Asked Questions </h1>
+		<p>Find answers to common questions concerning GCC.
+		<br>
+		Please see comp.lang.c FAQ and the C++ FAQ for general information regarding C, C++, and Fortran respectively.
+		</p>
+		
+		<h3>General Information</h3>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Accordion Item #1
+						</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Accordion Item #2
+						</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		<h3>Installation</h3>
+			<div class="accordion" id="accordionInstall">
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIOne" aria-expanded="false" aria-controls="collapseIOne">
+						How to install multiple versions of GCC
+
+					</button>
+					</h2>
+					<div id="collapseIOne" class="accordion-collapse collapse show" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+					It may be desirable to install multiple versions of the compiler on the same system. This can be done by using different prefix paths at configure time and a few symlinks.
+					<br>
+					Basically, configure the two compilers with different --prefix options, then build and install each compiler. Assume you want "gcc" to be the latest compiler and available in /usr/local/bin; also assume that you want "gcc2" to be the older gcc2 compiler and also available in /usr/local/bin.
+					<br>
+					The easiest way to do this is to configure the new GCC with --prefix=/usr/local/gcc and the older gcc2 with --prefix=/usr/local/gcc2. Build and install both compilers. Then make a symlink from /usr/local/bin/gcc to /usr/local/gcc/bin/gcc and from /usr/local/bin/gcc2 to /usr/local/gcc2/bin/gcc. Create similar links for the "g++", "c++" and "g77" compiler drivers.
+					<br>	
+					An alternative to using symlinks is to configure with a --program-transform-name option. This option specifies a sed command to process installed program names with. Using it you can, for instance, have all the new GCC programs installed as "new-gcc" and the like. You will still have to specify different --prefix options for new GCC and old GCC, because it is only the executable program names that are transformed. The difference is that you (as administrator) do not have to set up symlinks, but must specify additional directories in your (as a user) PATH. A complication with --program-transform-name is that the sed command invariably contains characters significant to the shell, and these have to be escaped correctly, also it is not possible to use "^" or "$" in the command. Here is the option to prefix "new-" to the new GCC installed programs:
+					<br>
+					--program-transform-name='s,\\\\(.*\\\\),new-\\\\1,'
+					<br>
+					With the above --prefix option, that will install the new GCC programs into /usr/local/gcc/bin with names prefixed by "new-". You can use --program-transform-name if you have multiple versions of GCC, and wish to be sure about which version you are invoking.
+					<br>
+					If you use --prefix, GCC may have difficulty locating a GNU assembler or linker on your system, GCC can not find GNU as/GNU ld explains how to deal with this.
+					<br>
+					Another option that may be easier is to use the --program-prefix= or --program-suffix= options to configure. So if you're installing GCC 2.95.2 and don't want to disturb the current version of GCC in /usr/local/bin/, you could do
+					<br>
+					configure --program-suffix=-2.95.2 <other configure options>
+					<br>
+					This should result in GCC being installed as /usr/local/bin/gcc-2.95.2 instead of /usr/local/bin/gcc.
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseITwo" aria-expanded="false" aria-controls="collapseITwo">
+						Dynamic linker is unable to find GCC libraries
+
+					</button>
+					</h2>
+					<div id="collapseITwo" class="accordion-collapse collapse" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+						This problem manifests itself by programs not finding shared libraries they depend on when the programs are started. (This often shows around libstdc++.)
+						<br>
+						GCC does not specify a runpath so that the dynamic linker can find dynamic libraries at runtime.
+						<br>
+						The short explanation is that if you always pass a -R option to the linker, your programs become dependent on directories which may be NFS mounted, and programs — even those which do not require these directories — may hang unnecessarily when an NFS server goes down. (SunOS effectively always passed a -R option for every -L option; this was a bad idea, and it was removed for Solaris.)
+						<br>
+						However, if you feel you really need such an option to be passed automatically to the linker, you may add it to a GCC specs file. This file can be created using gcc -dumpspecs and passed to GCC using the -specs= option. You may add linker flags such as -R or -rpath, depending on platform and linker, to the *link or *lib specs.
+						<br>
+						Alternately the syntax -Wl,option can be used to ask GCC to transfer the flag option to the linker.
+						<br>
+						Another alternative is to install a wrapper script around gcc, g++ or ld that adds the appropriate directory to the environment variable LD_RUN_PATH or equivalent (again, it's platform-dependent).
+
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIThree" aria-expanded="false" aria-controls="collapseIThree">
+						GCC can not find GNU as/GNU ld
+
+					</button>
+					</h2>
+					<div id="collapseIThree" class="accordion-collapse collapse" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+						GCC searches the PATH for an assembler and a linker, but it only does so after searching a directory list hard-coded in the GCC executables. Since, on most platforms, the hard-coded list includes directories in which the system assembler and linker can be found, you may have to take one of the following actions to arrange that GCC uses the GNU versions of those programs.
+						<br>
+						To ensure that GCC finds the GNU assembler (the GNU linker), which are required by some configurations, you should configure these with the same --prefix option as you used for GCC. Then build & install GNU as (GNU ld) and proceed with building GCC.
+						<br>
+						Another alternative is to create links to GNU as and ld in any of the directories printed by the command `gcc -print-search-dirs | grep '^programs:''. The link to `ld' should be named `real-ld' if `ld' already exists. If such links do not exist while you're compiling GCC, you may have to create them in the build directories too, within the gcc directory and in all the gcc/stage* subdirectories.
+						<br>
+						GCC 2.95 allows you to specify the full pathname of the assembler and the linker to use. The configure flags are `--with-as=/path/to/as' and `--with-ld=/path/to/ld'. GCC will try to use these pathnames before looking for `as' or `(real-)ld' in the standard search dirs. If, at configure-time, the specified programs are found to be GNU utilities, `--with-gnu-as' and `--with-gnu-ld' need not be used; these flags will be auto-detected. One drawback of this option is that it won't allow you to override the search path for assembler and linker with command-line options -B/path/ if the specified filenames exist.
+
+
+					</div>
+				</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIFour" aria-expanded="false" aria-controls="collapseIFour">
+						cpp: Usage:... Error
+					</button>
+					</h2>
+					<div id="collapseIFour" class="accordion-collapse collapse" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIFour" aria-expanded="false" aria-controls="collapseIFour">
+						If you get an error like this when building GCC (particularly when building __mulsi3), then you likely have a problem with your environment variables.
+						<br>
+							cpp: Usage: /usr/lib/gcc-lib/i586-unknown-linux-gnulibc1/2.7.2.3/cpp
+							[switches] input output
+						<br>
+						First look for an explicit '.' in either LIBRARY_PATH or GCC_EXEC_PREFIX from your environment. If you do not find an explicit '.', look for an empty pathname in those variables. Note that ':' at either the start or end of these variables is an implicit '.' and will cause problems.
+						<br>
+						Also note '::' in these paths will also cause similar problems.
+					</div>
+					</div>
+				</div>
+		</div>
+		
+		<h3>Testuite Problems</h3>
+				<div class="accordion" id="accordionTP">
+					<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTPOne" aria-expanded="false" aria-controls="collapseTPOne">
+						Accordion Item #1
+						</button>
+						</h2>
+						<div id="collapseTPOne" class="accordion-collapse collapse show" data-bs-parent="#accordionTP">
+						<div class="accordion-body">
+						<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTPTwo" aria-expanded="false" aria-controls="collapseTPTwo">
+						Accordion Item #2
+							</button>
+						</h2>
+						<div id="collapseTPTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTP">
+						<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+						</div>
+				  </div>
+				</div>
+		
+		<h3>Miscellaneous</h3>
+			<div class="accordion" id="accordionMisc">
+					<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMone" aria-expanded="false" aria-controls="collapseMone">
+						Accordion Item #1
+					</button>
+				</h2>
+				<div id="collapseMone" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+				<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div>
+					<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMTwo" aria-expanded="false" aria-controls="collapseMTwo">
+						Accordion Item #2
+					</button>
+					</h2>
+					<div id="collapseMTwo" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+						<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+					</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMThree" aria-expanded="false" aria-controls="collapseMThree">
+						Accordion Item #3
+					</button>
+					</h2>
+					<div id="collapseMThree" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+					<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMFour" aria-expanded="false" aria-controls="collapseMFour">
+						Accordion Item #4
+					</button>
+					</h2>
+					<div id="collapseMFour" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMFive" aria-expanded="false" aria-controls="collapseMFive">
+						Accordion Item #5
+					</button>
+					</h2>
+					<div id="collapseMFive" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMSix" aria-expanded="false" aria-controls="collapseMSix">
+						Accordion Item #6
+					</button>
+				</h2>
+					<div id="collapseMSix" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+						<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+				</div>
+				</div>
+			</div>
+		
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
